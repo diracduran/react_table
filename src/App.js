@@ -7,9 +7,8 @@ function App() {
 
     const [workers, setWorkers] = useState(data); // data - работники
     const [addFormData, setAddFormData] = useState({
-        firstName: "",
-        middleName: "",
-        lastName: "",
+        fullName: "",
+        birthdate: "",
         phone: "",
         email: "",
         workerdDays: "",
@@ -33,9 +32,8 @@ function App() {
     
         const newWorker = {
           id: nanoid(),
-          firstName: addFormData.firstName,
-          middleName: addFormData.middleName,
-          lastName: addFormData.lastName,
+          fullName: addFormData.fullName,
+          birthdate: addFormData.birthdate,
           phone: addFormData.phone,
           email: addFormData.email,
           workerdDays: addFormData.workerdDays,
@@ -47,17 +45,14 @@ function App() {
         setAddFormData(addFormData);
     };
 
-    // const totalSalary = ;
-
     return (
         <div className="app-container">
             <table>
                 <thead>
                     <tr>
-                    <th>Фамилия</th>
-                    <th>Имя</th>
-                    <th>Отчество</th>
+                    <th>ФИО</th>
                     <th>Телефон</th>
+                    <th>Дата рождения</th>
                     <th>Эл. почта</th>
                     <th>Кол-во отработан. дней</th>
                     <th>Зарплатная ставка на день</th>
@@ -67,10 +62,9 @@ function App() {
                 <tbody>
                     {workers.map(worker => (
                         <tr key={worker.id}>
-                            <td>{worker.firstName}</td>
-                            <td>{worker.middleName}</td>
-                            <td>{worker.lastName}</td>
+                            <td>{worker.fullName}</td>
                             <td>{worker.phone}</td>
+                            <td>{worker.birthdate}</td>
                             <td>{worker.email}</td>
                             <td>{worker.workerdDays}</td>
                             <td>{worker.salaryPerDay}</td>
@@ -78,29 +72,23 @@ function App() {
                         </tr>
                     ))} 
                     <tr>
-                        <td colSpan="7" style={{textAlign: 'right'}}>Σ: </td>
+                        <td colSpan="6" style={{textAlign: 'right'}}>Σ: </td>
                         <td>{workers.map((worker) => Number(worker.workerdDays) * Number(worker.salaryPerDay)).reduce((a, b) => a + b, 0)}</td>
                     </tr>
                 </tbody>
             </table>
             <h2>Добавить работника</h2>
             <form onSubmit={handleAddFormSubmit}>
-                <input
+            <input
                 type="text"
-                name="firstName"
-                placeholder="Имя"
+                name="fullName"
+                placeholder="ФИО"
                 onChange={handleAddFormChange}
                 />
                 <input
                 type="text"
-                name="middleName"
-                placeholder="Отчество"
-                onChange={handleAddFormChange}
-                />
-                <input
-                type="text"
-                name="lastName"
-                placeholder="Фамилия"
+                name="birthdate"
+                placeholder="Дата рождения"
                 onChange={handleAddFormChange}
                 />
                 <input

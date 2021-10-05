@@ -1,6 +1,6 @@
 [
-    { "id": "1", "firstName": "Иван", "middleName": "Иванович", "lastName": "Иванов", "email": "ivan@ivanov.ru", "phone": "1234567", "workerdDays": "1100", "salaryPerDay": "1800"},
-    { "id": "2", "firstName": "Пётр", "middleName": "Петрович", "lastName": "Петров", "email": "petr@petrov.ru", "phone": "1234568", "workerdDays": "1300", "salaryPerDay": "1300" },
-    { "id": "3", "firstName": "Роман", "middleName": "Романович", "lastName": "Романов", "email": "roman@romanov.ru", "phone": "1234569", "workerdDays": "110", "salaryPerDay": "1666" },
-    { "id": "4", "firstName": "Юрий", "middleName": "Юрьевич", "lastName": "Юрьев", "email": "yuri@yuriev.ru", "phone": "1234560", "workerdDays": "2000", "salaryPerDay": "2000" }
+    { "id": "1", "fullName": "Иван Иванович Иванов", "birthdate": "1.1.1973","email": "ivan@ivanov.ru", "phone": "1234567", "workerdDays": "1100", "salaryPerDay": "1800"},
+    { "id": "2", "fullName": "Пётр Петрович Петров", "birthdate": "1.1.1973","email": "petr@petrov.ru", "phone": "1234568", "workerdDays": "1300", "salaryPerDay": "1300" },
+    { "id": "3", "fullName": "Роман Романович Романов", "birthdate": "1.1.1973","email": "roman@romanov.ru", "phone": "1234569", "workerdDays": "110", "salaryPerDay": "1666" },
+    { "id": "4", "fullName": "Юрий Юрьевич Юрьев", "birthdate": "1.1.1973","email": "yuri@yuriev.ru", "phone": "1234560", "workerdDays": "2000", "salaryPerDay": "2000" }
   ]
